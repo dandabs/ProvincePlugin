@@ -20,8 +20,10 @@ public class Plugin extends JavaPlugin {
 
         instance = this;
 
-        if(Bukkit.getPluginManager().getPlugin("PlaceholderAPI") != null){
+        if (Bukkit.getPluginManager().getPlugin("PlaceholderAPI") != null) {
+
             new RegionExpansion(this).register();
+
         }
 
         getServer().getPluginManager().registerEvents(new PlayerJoin(), this);

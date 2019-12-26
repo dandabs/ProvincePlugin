@@ -2,7 +2,10 @@ package me.dandabs.templates;
 
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
+
+import java.io.File;
 
 public class Command implements CommandExecutor {
 
@@ -12,7 +15,11 @@ public class Command implements CommandExecutor {
         if (sender instanceof Player) {
             Player player = (Player) sender;
 
+            File langFile = new File("cloudconf", "lang.yml");
+            YamlConfiguration langConfig = YamlConfiguration.loadConfiguration(langFile);
 
+            File userFile = new File("cloudconf" + File.separator + "users", player.getUniqueId().toString() + ".yml");
+            YamlConfiguration userConfig = YamlConfiguration.loadConfiguration(userFile);
 
 
         }

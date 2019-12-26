@@ -1,6 +1,7 @@
 package me.dandabs.commands;
 
 import me.dandabs.statics.RegionLocations;
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -16,7 +17,16 @@ public class Spawn implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 
         if (sender instanceof Player) {
-            Player player = (Player) sender;
+
+            Player player;
+
+            if (args.length == 1) {
+
+                player = Bukkit.getPlayer(args[0].toString());
+
+            } else player = (Player) sender;
+
+            //Player player = (Player) sender;
 
             File langFile = new File("cloudconf", "lang.yml");
             YamlConfiguration langConfig = YamlConfiguration.loadConfiguration(langFile);
@@ -42,7 +52,7 @@ public class Spawn implements CommandExecutor {
                 player.teleport(RegionLocations.getKotonaruSpawn());
             }
 
-            player.sendMessage(ChatColor.translateAlternateColorCodes('&', langConfig.getString("provinceplugin.spawnmsg")));
+            player.sendMessage(ChatColor.translateAlternateColorCodes('&', langConfig.getString("provinceplugin.spawnmsg").replace("%player%", player.getName())));
 
         }
 
