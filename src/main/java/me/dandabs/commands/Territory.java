@@ -1,5 +1,6 @@
 package me.dandabs.commands;
 
+import me.dandabs.utilities.RegionGetters;
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -26,6 +27,7 @@ public class Territory implements CommandExecutor {
 
                 if (args[0].contains("showmonarch")) {
 
+                    player.sendMessage(ChatColor.translateAlternateColorCodes('&', langConfig.getString("provinceplugin.showmonarch").replace("%region%", args[1]).replace("%monarch%", new RegionGetters().whichMonarchName(args[1]))));
 
                 }
 
