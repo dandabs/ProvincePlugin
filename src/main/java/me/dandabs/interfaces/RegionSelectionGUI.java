@@ -40,9 +40,9 @@ public class RegionSelectionGUI implements InventoryHolder, Listener {
         inv.setItem(1, createGuiItem(Material.SIGN, "§cWelcome!", "§aHere on CloudCraft, you are assigned to a country.", "§eThis country will be the only place you can build.", "§bView each region's description and click on the one you'd like to start with.", "§4Note: you may change your country later."));
 
         inv.setItem(3, createGuiItem(Material.BIRCH_LEAVES, "§aKodoresu", "§aHistorical city of CloudCraft.", "§aArmour + Weapons", "§aMonarch: dandabs"));
-        inv.setItem(4, createGuiItem(Material.SNOWBALL, "§cSotogawa", "§cCloudCraft's Capital.", "§aSnow city of CloudCraft.", "§aFishing + Building", "§aMonarch: MysticSolo"));
-        inv.setItem(5, createGuiItem(Material.SPRUCE_SLAB, "§bMekakushi", "§bThe wooden city.", "§bTreecutting + Mining", "§bMonarch: frithiof07"));
-        inv.setItem(6, createGuiItem(Material.BRICKS, "§6Shoko", "§6Old-style romantic city.", "§6Exploration", "§6Monarch: valxteri"));
+        inv.setItem(4, createGuiItem(Material.SNOWBALL, "§cSotogawa", "§aSnow city of CloudCraft.", "§aFishing + Building", "§aMonarch: MysticSolo"));
+        //inv.setItem(5, createGuiItem(Material.SPRUCE_SLAB, "§bMekakushi", "§bThe wooden city.", "§bTreecutting + Mining", "§bMonarch: frithiof07"));
+        inv.setItem(6, createGuiItem(Material.BRICKS, "§6Shoko", "§6CloudCraft's Capital City.", "§6Old-style romantic city.", "§6Exploration", "§6Monarch: valxteri"));
         //inv.setItem(7, createGuiItem(Material.BLACK_BANNER, "§eKotonaru", "§aFirst line of the lore", "§bSecond line of the lore"));
     }
 
