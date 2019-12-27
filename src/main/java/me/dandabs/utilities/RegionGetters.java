@@ -10,11 +10,15 @@ import com.sk89q.worldguard.protection.ApplicableRegionSet;
 import com.sk89q.worldguard.protection.managers.RegionManager;
 import com.sk89q.worldguard.protection.regions.ProtectedRegion;
 import com.sk89q.worldguard.protection.regions.RegionContainer;
+import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.World;
+import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
 
+import java.io.File;
 import java.util.Set;
+import java.util.UUID;
 
 public class RegionGetters {
 
@@ -71,6 +75,26 @@ public class RegionGetters {
 
     }
 
+    public String whichMonarchName(String region) {
 
+        File regionFile = new File("cloudconf", "regions.yml");
+        YamlConfiguration regionConfig = YamlConfiguration.loadConfiguration(regionFile);
+
+        UUID monarch = UUID.fromString(regionConfig.getString("regions." + region + ".monarch"));
+
+        return Bukkit.getOfflinePlayer(monarch).getName();
+
+    }
+
+    public UUID whichMonarchId(String region) {
+
+        File regionFile = new File("cloudconf", "regions.yml");
+        YamlConfiguration regionConfig = YamlConfiguration.loadConfiguration(regionFile);
+
+        UUID monarch = UUID.fromString(regionConfig.getString("regions." + region + ".monarch"));
+
+        return monarch;
+
+    }
 
 }
