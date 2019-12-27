@@ -9,6 +9,8 @@ me/dandabs/commands/PD.class
 me/dandabs/placeholders/RegionExpansion.class
 me/dandabs/listeners/PlayerLeave.class
 me/dandabs/interfaces/RegionSelectionGUI.class
+me/dandabs/listeners/PlayerRespawn.class
+me/dandabs/commands/Territory.class
 me/dandabs/commands/Whereis.class
 me/dandabs/misc/UserDataHandler.class
 me/dandabs/statics/RegionLocations.class

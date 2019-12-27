@@ -7,6 +7,7 @@ import me.dandabs.interfaces.RegionSelectionGUI;
 import me.dandabs.listeners.InventoryClose;
 import me.dandabs.listeners.PlayerJoin;
 import me.dandabs.listeners.PlayerLeave;
+import me.dandabs.listeners.PlayerRespawn;
 import me.dandabs.placeholders.RegionExpansion;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -28,6 +29,7 @@ public class Plugin extends JavaPlugin {
 
         getServer().getPluginManager().registerEvents(new PlayerJoin(), this);
         getServer().getPluginManager().registerEvents(new PlayerLeave(), this);
+        getServer().getPluginManager().registerEvents(new PlayerRespawn(), this);
         getServer().getPluginManager().registerEvents(new RegionSelectionGUI(), this);
         getServer().getPluginManager().registerEvents(new InventoryClose(), this);
 
