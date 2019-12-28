@@ -7,19 +7,23 @@ website: https://cloudcraftmc.org.uk
 main: me.dandabs.Plugin
 database: false
 prefix: provinces
-depend: [WorldGuard, LuckPerms, PlaceholderAPI]
+depend: [WorldGuard, LuckPerms, PlaceholderAPI, WorldGuardEvents]
 commands:
   pd:
-    description: ProvincePlugin's developer tools
+    description: ProvincePlugin's developer tools.
     usage: /pd
     aliases: [provincedev, provincedeveloper]
     permission: provinceplugin.devtools
     permission-message: Sorry, but it looks like you aren't a developer.
   spawn:
-    description: Go to the server spawn for your region
-    usage: /spawn
+    description: Go to the server spawn for your region.
+    usage: /spawn [username]
     aliases: [gotospawn]
   whereis:
-    description: Check which region a player is in
+    description: Check which region a player is in.
     usage: /whereis <username>
     aliases: [where, checkregion, cr]
+  territory:
+    description: Regional configuration and logging commands.
+    usage: /territory <subcommand> <region> [args]
+    aliases: [terr, te]

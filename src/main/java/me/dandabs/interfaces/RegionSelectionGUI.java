@@ -105,10 +105,15 @@ public class RegionSelectionGUI implements InventoryHolder, Listener {
         ItemStack clickedItem = e.getCurrentItem();
 
         // verify current item is not null
-        if (clickedItem == null || clickedItem.getType() == Material.AIR || clickedItem.getType() == Material.SIGN) return;
+        if (clickedItem == null || clickedItem.getType() == Material.AIR || clickedItem.getType() == Material.SIGN)
+            return;
+
+        ArrayList<String> userRegions = new ArrayList<String>();
 
         if (e.getRawSlot() == 3) {
             userConfig.set("player.startingregion", "kodoresu");
+            userRegions.add("kodoresu");
+            userConfig.set("player.nationalities", userRegions);
             Plugin.getInstance().getServer().dispatchCommand(getServer().getConsoleSender(), "lp user " + e.getWhoClicked().getName() + " permission set group.kodoresu");
             e.getWhoClicked().teleport(RegionLocations.getKodoresuSpawn());
             Bukkit.getServer().broadcastMessage(" §d{§5+§d} §dWelcome §5" + e.getWhoClicked().getName() + " §dto CloudCraft for the first time! They chose the §4Kodoresu §dregion.");
@@ -116,6 +121,8 @@ public class RegionSelectionGUI implements InventoryHolder, Listener {
 
         if (e.getRawSlot() == 4) {
             userConfig.set("player.startingregion", "sotogawa");
+            userRegions.add("sotogawa");
+            userConfig.set("player.nationalities", userRegions);
             Plugin.getInstance().getServer().dispatchCommand(getServer().getConsoleSender(), "lp user " + e.getWhoClicked().getName() + " permission set group.sotogawa");
             e.getWhoClicked().teleport(RegionLocations.getSotogawaSpawn());
             Bukkit.getServer().broadcastMessage(" §d{§5+§d} §dWelcome §5" + e.getWhoClicked().getName() + " §dto CloudCraft for the first time! They chose the §4Sotogawa §dregion.");
@@ -123,6 +130,8 @@ public class RegionSelectionGUI implements InventoryHolder, Listener {
 
         if (e.getRawSlot() == 5) {
             userConfig.set("player.startingregion", "mekakushi");
+            userRegions.add("mekakushi");
+            userConfig.set("player.nationalities", userRegions);
             Plugin.getInstance().getServer().dispatchCommand(getServer().getConsoleSender(), "lp user " + e.getWhoClicked().getName() + " permission set group.mekakushi");
             e.getWhoClicked().teleport(RegionLocations.getMekakushiSpawn());
             Bukkit.getServer().broadcastMessage(" §d{§5+§d} §dWelcome §5" + e.getWhoClicked().getName() + " §dto CloudCraft for the first time! They chose the §4Mekakushi §dregion.");
@@ -130,6 +139,8 @@ public class RegionSelectionGUI implements InventoryHolder, Listener {
 
         if (e.getRawSlot() == 6) {
             userConfig.set("player.startingregion", "shoko");
+            userRegions.add("shoko");
+            userConfig.set("player.nationalities", userRegions);
             Plugin.getInstance().getServer().dispatchCommand(getServer().getConsoleSender(), "lp user " + e.getWhoClicked().getName() + " permission set group.shoko");
             e.getWhoClicked().teleport(RegionLocations.getShokoSpawn());
             Bukkit.getServer().broadcastMessage(" §d{§5+§d} §dWelcome §5" + e.getWhoClicked().getName() + " §dto CloudCraft for the first time! They chose the §4Shoko §dregion.");
@@ -137,6 +148,8 @@ public class RegionSelectionGUI implements InventoryHolder, Listener {
 
         if (e.getRawSlot() == 7) {
             userConfig.set("player.startingregion", "kotonaru");
+            userRegions.add("kotonaru");
+            userConfig.set("player.nationalities", userRegions);
             Plugin.getInstance().getServer().dispatchCommand(getServer().getConsoleSender(), "lp user " + e.getWhoClicked().getName() + " permission set group.kotonaru");
             e.getWhoClicked().teleport(RegionLocations.getKotonaruSpawn());
             Bukkit.getServer().broadcastMessage(" §d{§5+§d} §dWelcome §5" + e.getWhoClicked().getName() + " §dto CloudCraft for the first time! They chose the §4Kotonaru §dregion.");

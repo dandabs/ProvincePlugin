@@ -2,12 +2,10 @@ package me.dandabs;
 
 import me.dandabs.commands.PD;
 import me.dandabs.commands.Spawn;
+import me.dandabs.commands.Territory;
 import me.dandabs.commands.Whereis;
 import me.dandabs.interfaces.RegionSelectionGUI;
-import me.dandabs.listeners.InventoryClose;
-import me.dandabs.listeners.PlayerJoin;
-import me.dandabs.listeners.PlayerLeave;
-import me.dandabs.listeners.PlayerRespawn;
+import me.dandabs.listeners.*;
 import me.dandabs.placeholders.RegionExpansion;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -30,12 +28,15 @@ public class Plugin extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new PlayerJoin(), this);
         getServer().getPluginManager().registerEvents(new PlayerLeave(), this);
         getServer().getPluginManager().registerEvents(new PlayerRespawn(), this);
+        getServer().getPluginManager().registerEvents(new PlayerTeleport(), this);
         getServer().getPluginManager().registerEvents(new RegionSelectionGUI(), this);
         getServer().getPluginManager().registerEvents(new InventoryClose(), this);
+        getServer().getPluginManager().registerEvents(new RegionEnter(), this);
 
         this.getCommand("pd").setExecutor(new PD());
         this.getCommand("spawn").setExecutor(new Spawn());
         this.getCommand("whereis").setExecutor(new Whereis());
+        this.getCommand("territory").setExecutor(new Territory());
 
     }
 
