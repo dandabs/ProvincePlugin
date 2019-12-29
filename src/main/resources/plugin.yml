@@ -23,7 +23,12 @@ commands:
     description: Check which region a player is in.
     usage: /whereis <username>
     aliases: [where, checkregion, cr]
+    permission: provinceplugin.whereis
   territory:
     description: Regional configuration and logging commands.
     usage: /territory <subcommand> <region> [args]
     aliases: [terr, te]
+  citizenship:
+    description: Nationality configuration and logging commands.
+    usage: /citizenship <subcommand> <user> [args]
+    aliases: [citi, cz]

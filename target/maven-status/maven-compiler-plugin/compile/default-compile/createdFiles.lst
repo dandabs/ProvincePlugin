@@ -2,6 +2,7 @@ me/dandabs/commands/Spawn.class
 me/dandabs/Plugin.class
 me/dandabs/utilities/RegionGetters.class
 me/dandabs/listeners/InventoryClose.class
+me/dandabs/statics/PresetItems.class
 me/dandabs/listeners/PlayerJoin.class
 me/dandabs/interfaces/RegionSelectionGUI$1.class
 me/dandabs/templates/Command.class
@@ -10,6 +11,7 @@ me/dandabs/placeholders/RegionExpansion.class
 me/dandabs/listeners/PlayerLeave.class
 me/dandabs/interfaces/RegionSelectionGUI.class
 me/dandabs/listeners/PlayerRespawn.class
+me/dandabs/commands/Citizenship.class
 me/dandabs/commands/Territory.class
 me/dandabs/listeners/PlayerTeleport.class
 me/dandabs/listeners/RegionEnter.class

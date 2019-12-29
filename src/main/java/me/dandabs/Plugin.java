@@ -1,9 +1,6 @@
 package me.dandabs;
 
-import me.dandabs.commands.PD;
-import me.dandabs.commands.Spawn;
-import me.dandabs.commands.Territory;
-import me.dandabs.commands.Whereis;
+import me.dandabs.commands.*;
 import me.dandabs.interfaces.RegionSelectionGUI;
 import me.dandabs.listeners.*;
 import me.dandabs.placeholders.RegionExpansion;
@@ -37,6 +34,7 @@ public class Plugin extends JavaPlugin {
         this.getCommand("spawn").setExecutor(new Spawn());
         this.getCommand("whereis").setExecutor(new Whereis());
         this.getCommand("territory").setExecutor(new Territory());
+        this.getCommand("citizenship").setExecutor(new Citizenship());
 
     }
 

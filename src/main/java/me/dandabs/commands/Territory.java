@@ -27,6 +27,13 @@ public class Territory implements CommandExecutor {
 
                 if (args[0].contains("showmonarch")) {
 
+                    if (!player.hasPermission("provinceplugin.territory.showmonarch")) {
+
+                        player.sendMessage(ChatColor.translateAlternateColorCodes('&', langConfig.getString("provinceplugin.nopermission")));
+                        return true;
+
+                    }
+
                     player.sendMessage(ChatColor.translateAlternateColorCodes('&', langConfig.getString("provinceplugin.showmonarch").replace("%region%", args[1]).replace("%monarch%", new RegionGetters().whichMonarchName(args[1]))));
 
                 }

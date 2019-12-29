@@ -27,3 +27,7 @@ commands:
     description: Regional configuration and logging commands.
     usage: /territory <subcommand> <region> [args]
     aliases: [terr, te]
+  citizenship:
+    description: Nationality configuration and logging commands.
+    usage: /citizenship <subcommand> <user> [args]
+    aliases: [citi, cz]
