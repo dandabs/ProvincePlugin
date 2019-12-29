@@ -1,4 +1,5 @@
 me/dandabs/commands/Spawn.class
+me/dandabs/listeners/InventoryOpen.class
 me/dandabs/Plugin.class
 me/dandabs/utilities/RegionGetters.class
 me/dandabs/listeners/InventoryClose.class

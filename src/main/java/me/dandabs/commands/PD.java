@@ -1,5 +1,6 @@
 package me.dandabs.commands;
 
+import me.dandabs.statics.PresetItems;
 import org.bukkit.Bukkit;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.command.Command;
@@ -34,6 +35,20 @@ public class PD implements CommandExecutor {
                 userFile.delete();
 
                 player.sendMessage("§aSuccessfully deleted " + target.getUniqueId().toString() + ".yml.");
+
+            }
+
+            if (args[0].contains("getscanner")) {
+
+                player.getInventory().setItemInMainHand(new PresetItems().securityScanner(Integer.valueOf(args[1])));
+
+            }
+
+            if (args[0].contains("getpass")) {
+
+                OfflinePlayer opl = Bukkit.getOfflinePlayer(args[2]);
+
+                player.getInventory().setItemInMainHand(new PresetItems().securityPass(Integer.valueOf(args[1]), opl));
 
             }
 

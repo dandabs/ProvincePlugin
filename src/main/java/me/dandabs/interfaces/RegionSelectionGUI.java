@@ -37,7 +37,7 @@ public class RegionSelectionGUI implements InventoryHolder, Listener {
     // You can call this whenever you want to put the items in
     public void initializeItems() {
 
-        inv.setItem(1, createGuiItem(Material.SIGN, "§cWelcome!", "§aHere on CloudCraft, you are assigned to a country.", "§eThis country will be the only place you can build.", "§bView each region's description and click on the one you'd like to start with.", "§4Note: you may change your country later."));
+        inv.setItem(1, createGuiItem(Material.DARK_OAK_SIGN, "§cWelcome!", "§aHere on CloudCraft, you are assigned to a country.", "§eThis country will be the only place you can build.", "§bView each region's description and click on the one you'd like to start with.", "§4Note: you may change your country later."));
 
         inv.setItem(3, createGuiItem(Material.BIRCH_LEAVES, "§aKodoresu", "§aHistorical city of CloudCraft.", "§aArmour + Weapons", "§aMonarch: dandabs"));
         inv.setItem(4, createGuiItem(Material.SNOWBALL, "§cSotogawa", "§aSnow city of CloudCraft.", "§aFishing + Building", "§aMonarch: MysticSolo"));
@@ -105,7 +105,7 @@ public class RegionSelectionGUI implements InventoryHolder, Listener {
         ItemStack clickedItem = e.getCurrentItem();
 
         // verify current item is not null
-        if (clickedItem == null || clickedItem.getType() == Material.AIR || clickedItem.getType() == Material.SIGN)
+        if (clickedItem == null || clickedItem.getType() == Material.AIR || clickedItem.getType() == Material.DARK_OAK_SIGN)
             return;
 
         ArrayList<String> userRegions = new ArrayList<String>();
