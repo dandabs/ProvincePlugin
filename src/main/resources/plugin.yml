@@ -32,3 +32,7 @@ commands:
     description: Nationality configuration and logging commands.
     usage: /citizenship <subcommand> <user> [args]
     aliases: [citi, cz]
+  wilderness:
+    description: Randomly teleport yourself into the world.
+    usage: /wilderness
+    aliases: [wild, rtp, randomtp, wildtp, rt, rgrtp]

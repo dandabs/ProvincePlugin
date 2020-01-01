@@ -22,6 +22,7 @@ public class Plugin extends JavaPlugin {
 
         }
 
+        getServer().getPluginManager().registerEvents(new AsyncPlayerChat(), this);
         getServer().getPluginManager().registerEvents(new PlayerJoin(), this);
         getServer().getPluginManager().registerEvents(new PlayerLeave(), this);
         getServer().getPluginManager().registerEvents(new PlayerRespawn(), this);
@@ -36,6 +37,7 @@ public class Plugin extends JavaPlugin {
         this.getCommand("whereis").setExecutor(new Whereis());
         this.getCommand("territory").setExecutor(new Territory());
         this.getCommand("citizenship").setExecutor(new Citizenship());
+        this.getCommand("wilderness").setExecutor(new Wilderness());
 
     }
 

@@ -1,5 +1,6 @@
 package me.dandabs.commands;
 
+import me.dandabs.Plugin;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.OfflinePlayer;
@@ -11,6 +12,8 @@ import org.bukkit.entity.Player;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+
+import static org.bukkit.Bukkit.getServer;
 
 public class Citizenship implements CommandExecutor {
 
@@ -105,6 +108,7 @@ public class Citizenship implements CommandExecutor {
                                     rgs.add(args[2]);
 
                                     userConfig.set("player.nationalities", rgs);
+                                    Plugin.getInstance().getServer().dispatchCommand(getServer().getConsoleSender(), "lp user " + oplayer.getName() + " permission set group." + args[2]);
 
                                     try {
                                         userConfig.save(userFile);
@@ -164,6 +168,8 @@ public class Citizenship implements CommandExecutor {
                                     rgs.remove(args[2]);
 
                                     userConfig.set("player.nationalities", rgs);
+
+                                    Plugin.getInstance().getServer().dispatchCommand(getServer().getConsoleSender(), "lp user " + oplayer.getName() + " permission set group." + args[2] + " false");
 
                                     try {
                                         userConfig.save(userFile);
