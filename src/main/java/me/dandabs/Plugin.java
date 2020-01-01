@@ -7,6 +7,11 @@ import me.dandabs.placeholders.RegionExpansion;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.TimeZone;
+
 public class Plugin extends JavaPlugin {
 
     private static Plugin instance;
@@ -23,10 +28,12 @@ public class Plugin extends JavaPlugin {
         }
 
         getServer().getPluginManager().registerEvents(new AsyncPlayerChat(), this);
+        getServer().getPluginManager().registerEvents(new BlockRedstone(), this);
         getServer().getPluginManager().registerEvents(new PlayerJoin(), this);
         getServer().getPluginManager().registerEvents(new PlayerLeave(), this);
         getServer().getPluginManager().registerEvents(new PlayerRespawn(), this);
         getServer().getPluginManager().registerEvents(new PlayerTeleport(), this);
+        getServer().getPluginManager().registerEvents(new PlayerInteract(), this);
         getServer().getPluginManager().registerEvents(new RegionSelectionGUI(), this);
         getServer().getPluginManager().registerEvents(new InventoryOpen(), this);
         getServer().getPluginManager().registerEvents(new InventoryClose(), this);
@@ -38,6 +45,22 @@ public class Plugin extends JavaPlugin {
         this.getCommand("territory").setExecutor(new Territory());
         this.getCommand("citizenship").setExecutor(new Citizenship());
         this.getCommand("wilderness").setExecutor(new Wilderness());
+
+        Bukkit.getScheduler().scheduleSyncRepeatingTask(this.getInstance(), new Runnable() {
+
+            @Override
+            public void run() {
+
+                Date date = new Date();
+                DateFormat df = new SimpleDateFormat("HH:mmaa");
+
+                df.setTimeZone(TimeZone.getTimeZone("Europe/Oslo"));
+
+                Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), "etime set " + df.format(date) + " world");
+
+            }
+
+        }, 1, 20 * 60 * 1);
 
     }
 

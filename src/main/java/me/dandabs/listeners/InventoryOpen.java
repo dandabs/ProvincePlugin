@@ -5,6 +5,8 @@ import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;
 import org.bukkit.block.Dropper;
+import org.bukkit.block.data.BlockData;
+import org.bukkit.block.data.Openable;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -19,6 +21,7 @@ public class InventoryOpen implements Listener {
     public void onInventoryOpen(InventoryOpenEvent e) {
 
         Player p = (Player) e.getPlayer();
+
 
         File langFile = new File("cloudconf", "lang.yml");
         YamlConfiguration langConfig = YamlConfiguration.loadConfiguration(langFile);
@@ -48,13 +51,38 @@ public class InventoryOpen implements Listener {
 
             Block activation = scanner.getBlock().getRelative(BlockFace.DOWN);
 
-            if (!(activation.getType() == Material.REDSTONE_BLOCK)) {
+            if (activation.getType() == Material.RED_CONCRETE) {
 
                 activation.setType(Material.REDSTONE_BLOCK);
 
-            } else {
+            } else if (activation.getType() == Material.REDSTONE_BLOCK) {
 
                 activation.setType(Material.RED_CONCRETE);
+
+            } else {
+
+                for (BlockFace bf : BlockFace.values()) {
+
+                    if (scanner.getBlock().getRelative(bf).getType() == Material.IRON_DOOR) {
+
+                        Block door = scanner.getBlock().getRelative(bf);
+                        BlockData doordata = door.getBlockData();
+
+                        if (((Openable) doordata).isOpen()) {
+
+                            ((Openable) doordata).setOpen(false);
+
+                        } else {
+
+                            ((Openable) doordata).setOpen(true);
+
+                        }
+
+                        door.setBlockData(doordata);
+
+                    }
+
+                }
 
             }
 

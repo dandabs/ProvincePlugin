@@ -11,6 +11,8 @@
 /Volumes/NuudeliNAS/IdeaProjects/ProvincePlugin/src/main/java/me/dandabs/placeholders/RegionExpansion.java
 /Volumes/NuudeliNAS/IdeaProjects/ProvincePlugin/src/main/java/me/dandabs/commands/PD.java
 /Volumes/NuudeliNAS/IdeaProjects/ProvincePlugin/src/main/java/me/dandabs/utilities/RegionGetters.java
+/Volumes/NuudeliNAS/IdeaProjects/ProvincePlugin/src/main/java/me/dandabs/listeners/BlockRedstone.java
+/Volumes/NuudeliNAS/IdeaProjects/ProvincePlugin/src/main/java/me/dandabs/listeners/PlayerInteract.java
 /Volumes/NuudeliNAS/IdeaProjects/ProvincePlugin/src/main/java/me/dandabs/listeners/PlayerRespawn.java
 /Volumes/NuudeliNAS/IdeaProjects/ProvincePlugin/src/main/java/me/dandabs/commands/Wilderness.java
 /Volumes/NuudeliNAS/IdeaProjects/ProvincePlugin/src/main/java/me/dandabs/Plugin.java

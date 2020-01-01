@@ -52,6 +52,12 @@ public class PD implements CommandExecutor {
 
             }
 
+            if (args[0].contains("getkey")) {
+
+                player.getInventory().setItemInMainHand(new PresetItems().blankKey());
+
+            }
+
         }
 
         return true;

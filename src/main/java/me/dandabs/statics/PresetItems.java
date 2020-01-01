@@ -50,4 +50,18 @@ public class PresetItems {
 
     }
 
+    public ItemStack blankKey() {
+
+        ItemStack key = new ItemStack(Material.TRIPWIRE_HOOK);
+        key.setAmount(1);
+
+        ItemMeta keymeta = key.getItemMeta();
+        keymeta.setDisplayName(ChatColor.GRAY + "Blank Key");
+
+        key.setItemMeta(keymeta);
+
+        return key;
+
+    }
+
 }
