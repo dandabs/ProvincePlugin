@@ -62,7 +62,7 @@ public class PD implements CommandExecutor {
                 ItemMeta meta = player.getItemInHand().getItemMeta();
 
                 ArrayList<String> lore = new ArrayList<String>();
-                lore.add(args.toString().split(args[0])[1]);
+                lore.add(args[1]);
 
                 meta.setLore(lore);
 
