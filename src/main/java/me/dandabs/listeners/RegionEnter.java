@@ -28,10 +28,13 @@ public class RegionEnter implements Listener {
 
         for (ProtectedRegion r : event.getRegions()) {
 
-            if (!userConfig.getStringList("player.nationalities").contains(r.getId())) {
+            if (r.getId().equals("kodoresu") || r.getId().equals("mekakushi") || r.getId().equals("shoko") || r.getId().equals("sotogawa")) {
 
-                player.sendMessage(ChatColor.translateAlternateColorCodes('&', langConfig.getString("provinceplugin.enterwarning")));
+                if (!userConfig.getStringList("player.nationalities").contains(r.getId())) {
 
+                    player.sendMessage(ChatColor.translateAlternateColorCodes('&', langConfig.getString("provinceplugin.enterwarning")));
+
+                }
             }
 
         }
