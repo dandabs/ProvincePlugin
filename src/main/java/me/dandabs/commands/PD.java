@@ -19,9 +19,6 @@ public class PD implements CommandExecutor {
         if (sender instanceof Player) {
             Player player = (Player) sender;
 
-            Bukkit.getServer().getLogger().info(args[0]);
-            Bukkit.getServer().getLogger().info(args[1]);
-
             if ((args[0].contains("rmconf"))) {
 
                 OfflinePlayer target = Bukkit.getOfflinePlayer(args[1]);
