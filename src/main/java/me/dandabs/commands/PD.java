@@ -7,8 +7,10 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.meta.ItemMeta;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.UUID;
 
 public class PD implements CommandExecutor {
@@ -52,6 +54,19 @@ public class PD implements CommandExecutor {
             if (args[0].contains("getkey")) {
 
                 player.getInventory().setItemInMainHand(new PresetItems().blankKey());
+
+            }
+
+            if (args[0].equals("setlore")) {
+
+                ItemMeta meta = player.getItemInHand().getItemMeta();
+
+                ArrayList<String> lore = new ArrayList<String>();
+                lore.add(args.toString().split(args[0])[1]);
+
+                meta.setLore(lore);
+
+                player.getItemInHand().setItemMeta(meta);
 
             }
 

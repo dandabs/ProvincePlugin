@@ -23,6 +23,7 @@ me/dandabs/statics/PresetItems.class
 me/dandabs/listeners/PlayerJoin.class
 me/dandabs/templates/Command.class
 me/dandabs/listeners/BlockRedstone.class
+me/dandabs/listeners/EntityDamage.class
 me/dandabs/listeners/PlayerInteract$2.class
 me/dandabs/commands/Citizenship.class
 me/dandabs/commands/Whereis.class
