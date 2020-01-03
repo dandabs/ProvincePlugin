@@ -1,5 +1,7 @@
 package me.dandabs.listeners;
 
+import me.dandabs.statics.TrainLocations;
+import me.dandabs.utilities.TrainSystem;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -49,7 +51,35 @@ public class PlayerJoin implements Listener {
 
         }
 
+        if (new TrainSystem().playerIsTravelling(player)) {
+
+            File trainFile = new File("cloudconf", "trains.yml");
+            YamlConfiguration trainConfig = YamlConfiguration.loadConfiguration(trainFile);
+
+            ArrayList<String> journeyinfo = (ArrayList<String>) trainConfig.getStringList("journeys." + player.getUniqueId().toString());
+
+            long remainingTime = Integer.valueOf(journeyinfo.get(1)) - (System.currentTimeMillis() / 1000L);
+
+            if (remainingTime <= 0) {
+
+                // journey has finished
+                trainConfig.set("journeys." + player.getUniqueId().toString(), null);
+                try {
+                    trainConfig.save(trainFile);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                player.teleport(TrainLocations.getDestination(journeyinfo.get(2)));
+
+            } else {
+
+                new TrainSystem().boardTrain(player, Integer.valueOf(journeyinfo.get(1)), journeyinfo.get(2));
+
+            }
+
         }
 
-
     }
+
+}

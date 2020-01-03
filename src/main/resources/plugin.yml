@@ -6,7 +6,7 @@ author: dandabs
 website: https://cloudcraftmc.org.uk
 main: me.dandabs.Plugin
 database: false
-prefix: provinces
+prefix: Provinces
 depend: [WorldGuard, LuckPerms, PlaceholderAPI, WorldGuardEvents]
 commands:
   pd:

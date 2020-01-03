@@ -53,9 +53,10 @@ public class Plugin extends JavaPlugin {
             public void run() {
 
                 Date date = new Date();
-                DateFormat df = new SimpleDateFormat("HH:mmaa");
+                DateFormat df = new SimpleDateFormat("hh:mmaa");
 
                 df.setTimeZone(TimeZone.getTimeZone("Europe/Oslo"));
+
 
                 Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), "etime set " + df.format(date) + " world");
 

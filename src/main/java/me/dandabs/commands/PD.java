@@ -1,6 +1,7 @@
 package me.dandabs.commands;
 
 import me.dandabs.statics.PresetItems;
+import me.dandabs.utilities.TrainSystem;
 import org.bukkit.Bukkit;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.command.Command;
@@ -67,6 +68,14 @@ public class PD implements CommandExecutor {
                 meta.setLore(lore);
 
                 player.getItemInHand().setItemMeta(meta);
+
+            }
+
+            if (args[0].equals("boardtrain")) {
+
+                Integer endtime = Math.toIntExact((System.currentTimeMillis() / 1000L)) + 60;
+
+                new TrainSystem().boardTrain(player, endtime, args[1]);
 
             }
 
