@@ -1,5 +1,6 @@
 package me.dandabs.commands;
 
+import me.dandabs.interfaces.TrainSelectionGUI;
 import me.dandabs.statics.PresetItems;
 import me.dandabs.utilities.TrainSystem;
 import org.bukkit.Bukkit;
@@ -76,6 +77,12 @@ public class PD implements CommandExecutor {
                 Integer endtime = Math.toIntExact((System.currentTimeMillis() / 1000L)) + 60;
 
                 new TrainSystem().boardTrain(player, endtime, args[1]);
+
+            }
+
+            if (args[0].equals("trains")) {
+
+                new TrainSelectionGUI().openInventory(Bukkit.getPlayer(args[2]));
 
             }
 

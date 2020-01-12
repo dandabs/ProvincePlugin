@@ -2,6 +2,7 @@ package me.dandabs;
 
 import me.dandabs.commands.*;
 import me.dandabs.interfaces.RegionSelectionGUI;
+import me.dandabs.interfaces.TrainSelectionGUI;
 import me.dandabs.listeners.*;
 import me.dandabs.placeholders.RegionExpansion;
 import org.bukkit.Bukkit;
@@ -36,6 +37,7 @@ public class Plugin extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new PlayerTeleport(), this);
         getServer().getPluginManager().registerEvents(new PlayerInteract(), this);
         getServer().getPluginManager().registerEvents(new RegionSelectionGUI(), this);
+        getServer().getPluginManager().registerEvents(new TrainSelectionGUI(), this);
         getServer().getPluginManager().registerEvents(new InventoryOpen(), this);
         getServer().getPluginManager().registerEvents(new InventoryClose(), this);
         getServer().getPluginManager().registerEvents(new RegionEnter(), this);

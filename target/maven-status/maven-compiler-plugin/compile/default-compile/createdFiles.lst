@@ -1,5 +1,6 @@
 me/dandabs/listeners/PlayerInteract.class
 me/dandabs/utilities/RegionGetters.class
+me/dandabs/utilities/TrainSystem$1.class
 me/dandabs/interfaces/RegionSelectionGUI$1.class
 me/dandabs/commands/PD.class
 me/dandabs/placeholders/RegionExpansion.class
@@ -11,10 +12,13 @@ me/dandabs/Plugin$1.class
 me/dandabs/listeners/PlayerTeleport.class
 me/dandabs/listeners/RegionEnter.class
 me/dandabs/listeners/PlayerInteract$1.class
+me/dandabs/statics/TrainLocations.class
 me/dandabs/misc/UserDataHandler.class
 me/dandabs/listeners/AsyncPlayerChat.class
+me/dandabs/interfaces/TrainSelectionGUI.class
 me/dandabs/commands/Spawn.class
 me/dandabs/commands/Wilderness.class
+me/dandabs/utilities/TrainSystem.class
 me/dandabs/listeners/InventoryOpen.class
 me/dandabs/Plugin.class
 me/dandabs/listeners/BlockRedstone$1.class
@@ -29,3 +33,4 @@ me/dandabs/commands/Citizenship.class
 me/dandabs/commands/Whereis.class
 me/dandabs/statics/RegionLocations.class
 me/dandabs/listeners/InventoryClose$1.class
+me/dandabs/interfaces/TrainSelectionGUI$1.class

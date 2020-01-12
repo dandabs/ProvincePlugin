@@ -41,7 +41,7 @@ public class RegionSelectionGUI implements InventoryHolder, Listener {
 
         inv.setItem(3, createGuiItem(Material.BIRCH_LEAVES, "§aKodoresu", "§aHistorical city of CloudCraft.", "§aArmour + Weapons", "§aMonarch: dandabs"));
         inv.setItem(4, createGuiItem(Material.SNOWBALL, "§cSotogawa", "§aSnow city of CloudCraft.", "§aFishing + Building", "§aMonarch: MysticSolo"));
-        //inv.setItem(5, createGuiItem(Material.SPRUCE_SLAB, "§bMekakushi", "§bThe wooden city.", "§bTreecutting + Mining", "§bMonarch: frithiof07"));
+        inv.setItem(5, createGuiItem(Material.SPRUCE_SLAB, "§bMekakushi", "§bThe wooden city.", "§bTreecutting + Mining", "§bMonarch: VersusS"));
         inv.setItem(6, createGuiItem(Material.BRICKS, "§6Shoko", "§6CloudCraft's Capital City.", "§6Old-style romantic city.", "§6Exploration", "§6Monarch: valxteri"));
         //inv.setItem(7, createGuiItem(Material.BLACK_BANNER, "§eKotonaru", "§aFirst line of the lore", "§bSecond line of the lore"));
     }

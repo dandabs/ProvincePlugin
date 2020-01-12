@@ -50,8 +50,21 @@ public class TrainSystem {
 
                 int remainingTimeRunnable = Math.toIntExact(endtime - (System.currentTimeMillis() / 1000L));
 
-                Double remainingTimePercentage = Double.valueOf((remainingTimeRunnable * 100) / remainingTime);
-                Double remainingTimeDecimal = remainingTimePercentage / 100;
+                Double remainingTimePercentage;
+                Double remainingTimeDecimal;
+
+                if (remainingTime != 0) {
+
+
+                    remainingTimePercentage = Double.valueOf((remainingTimeRunnable * 100) / remainingTime);
+                    remainingTimeDecimal = remainingTimePercentage / 100;
+
+                } else {
+
+                    remainingTimePercentage = Double.valueOf(0);
+                    remainingTimeDecimal = Double.valueOf(0);
+
+                }
 
                 if (remainingTimePercentage <= 0) {
 

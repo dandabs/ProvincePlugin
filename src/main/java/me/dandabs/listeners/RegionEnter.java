@@ -1,6 +1,7 @@
 package me.dandabs.listeners;
 
 import com.sk89q.worldguard.protection.regions.ProtectedRegion;
+import me.dandabs.interfaces.TrainSelectionGUI;
 import net.raidstone.wgevents.events.RegionsEnteredEvent;
 import org.bukkit.ChatColor;
 import org.bukkit.configuration.file.YamlConfiguration;
@@ -17,6 +18,10 @@ public class RegionEnter implements Listener {
     public void onRegionEntered(RegionsEnteredEvent event) {
 
         Player player = event.getPlayer();
+
+        if (event.getRegionsNames().contains("kodoresu-trainstationdoors")) {
+            new TrainSelectionGUI().openInventory(event.getPlayer());
+        }
 
         File userFile = new File("cloudconf" + File.separator + "users", player.getUniqueId().toString() + ".yml");
         YamlConfiguration userConfig = YamlConfiguration.loadConfiguration(userFile);

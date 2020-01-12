@@ -35,7 +35,7 @@ public class Whereis implements CommandExecutor {
 
             String region = new RegionGetters().whichRegion(player);
 
-            player.sendMessage(ChatColor.translateAlternateColorCodes('&', langConfig.getString("provinceplugin.whereis").replace("%region%", region).replace("%player%", player.getName())));
+            ((Player) sender).sendMessage(ChatColor.translateAlternateColorCodes('&', langConfig.getString("provinceplugin.whereis").replace("%region%", region).replace("%player%", player.getName())));
 
         }
 

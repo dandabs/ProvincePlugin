@@ -27,9 +27,9 @@ public class TrainLocations {
 
             return makeLoc(-1048.257, 40, -45720.378, 53.482, 11.757);
 
-        } else if (destination.equals("KodoresuCity")) {
+        } else if (destination.equals("KodoresuCityTrain")) {
 
-            return RegionLocations.getKodoresuSpawn();
+            return makeLoc(2179.048, 66, -30174.699, 1.282, 3.402);
 
         } else {
 

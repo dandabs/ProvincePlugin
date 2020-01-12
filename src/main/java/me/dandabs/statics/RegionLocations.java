@@ -18,10 +18,10 @@ public class RegionLocations {
 
     public static Location getSotogawaSpawn() {
 
-        Location loc = new Location(Bukkit.getWorld("world"), 2868.500, 67.000, -18816.500);
+        Location loc = new Location(Bukkit.getWorld("world"), 2868.500, 67.000, -18616.500);
 
-        loc.setPitch((float) 12.1);
-        loc.setYaw((float) -179.9);
+        loc.setPitch((float) 0.899);
+        loc.setYaw((float) 180.444);
 
         return loc;
 
@@ -29,10 +29,10 @@ public class RegionLocations {
 
     public static Location getMekakushiSpawn() {
 
-        Location loc = new Location(Bukkit.getWorld("world"), -49939.500, 65.000, 1198.500);
+        Location loc = new Location(Bukkit.getWorld("world"), -2843.500, 97.000, -16418.500);
 
-        loc.setPitch((float) 0.75);
-        loc.setYaw((float) 179.852);
+        loc.setPitch((float) 0.148);
+        loc.setYaw((float) 88.419);
 
         return loc;
 
