@@ -38,8 +38,12 @@ public class TrainSelectionGUI implements InventoryHolder, Listener {
     // You can call this whenever you want to put the items in
     public void initializeItems() {
 
-        inv.setItem(0, createGuiItem(Material.RED_CONCRETE, "§cKodoresu City Train Station"));
-        inv.setItem(1, createGuiItem(Material.BLUE_CONCRETE, "§bShoko City Subway"));
+        inv.setItem(0, createGuiItem(Material.RED_CONCRETE, "§c[KR] Kodoresu City Train Station"));
+        inv.setItem(1, createGuiItem(Material.BLUE_CONCRETE, "§b[SH] Shoko City Subway"));
+        inv.setItem(2, createGuiItem(Material.LIME_CONCRETE, "§b[SG] Sotogawa City Train Station"));
+        inv.setItem(3, createGuiItem(Material.YELLOW_CONCRETE, "§b[MK] Mekakushi City Monorail Depot"));
+        inv.setItem(4, createGuiItem(Material.YELLOW_CONCRETE, "§b[MK] Ballymena Replica Train Station"));
+
     }
 
     // Nice little method to create a gui item with a custom name, and description
@@ -122,6 +126,33 @@ public class TrainSelectionGUI implements InventoryHolder, Listener {
             double distance = e.getWhoClicked().getLocation().distance(dest);
             double seconds = (distance / 2) / 60;
             new TrainSystem().boardTrain(((Player) e.getWhoClicked()), Integer.valueOf((int) (Integer.valueOf((int) Instant.now().getEpochSecond()) + seconds)), "ShokoCitySubway");
+
+        }
+
+        if (e.getRawSlot() == 2) {
+
+            Location dest = TrainLocations.getDestination("SotogawaCityTrain");
+            double distance = e.getWhoClicked().getLocation().distance(dest);
+            double seconds = (distance / 2) / 60;
+            new TrainSystem().boardTrain(((Player) e.getWhoClicked()), Integer.valueOf((int) (Integer.valueOf((int) Instant.now().getEpochSecond()) + seconds)), "SotogawaCityTrain");
+
+        }
+
+        if (e.getRawSlot() == 3) {
+
+            Location dest = TrainLocations.getDestination("MekakushiCityMonorail");
+            double distance = e.getWhoClicked().getLocation().distance(dest);
+            double seconds = (distance / 2) / 60;
+            new TrainSystem().boardTrain(((Player) e.getWhoClicked()), Integer.valueOf((int) (Integer.valueOf((int) Instant.now().getEpochSecond()) + seconds)), "MekakushiCityMonorail");
+
+        }
+
+        if (e.getRawSlot() == 4) {
+
+            Location dest = TrainLocations.getDestination("BallymenaReplicaTrain");
+            double distance = e.getWhoClicked().getLocation().distance(dest);
+            double seconds = (distance / 2) / 60;
+            new TrainSystem().boardTrain(((Player) e.getWhoClicked()), Integer.valueOf((int) (Integer.valueOf((int) Instant.now().getEpochSecond()) + seconds)), "BallymenaReplicaTrain");
 
         }
 

@@ -19,7 +19,7 @@ public class RegionEnter implements Listener {
 
         Player player = event.getPlayer();
 
-        if (event.getRegionsNames().contains("kodoresu-trainstationdoors")) {
+        if (event.getRegionsNames().contains("kodoresu-trainstationdoors") || event.getRegionsNames().contains("train-1") || event.getRegionsNames().contains("train-2") || event.getRegionsNames().contains("train-3") || event.getRegionsNames().contains("train-4") || event.getRegionsNames().contains("train-5")) {
             new TrainSelectionGUI().openInventory(event.getPlayer());
         }
 

@@ -3,6 +3,7 @@ package me.dandabs.interfaces;
 import me.dandabs.Plugin;
 import me.dandabs.statics.RegionLocations;
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
@@ -39,10 +40,10 @@ public class RegionSelectionGUI implements InventoryHolder, Listener {
 
         inv.setItem(1, createGuiItem(Material.DARK_OAK_SIGN, "§cWelcome!", "§aHere on CloudCraft, you are assigned to a country.", "§eThis country will be the only place you can build.", "§bView each region's description and click on the one you'd like to start with.", "§4Note: you may change your country later."));
 
-        inv.setItem(3, createGuiItem(Material.BIRCH_LEAVES, "§aKodoresu", "§aHistorical city of CloudCraft.", "§aArmour + Weapons", "§aMonarch: dandabs"));
-        inv.setItem(4, createGuiItem(Material.SNOWBALL, "§cSotogawa", "§aSnow city of CloudCraft.", "§aFishing + Building", "§aMonarch: MysticSolo"));
-        inv.setItem(5, createGuiItem(Material.SPRUCE_SLAB, "§bMekakushi", "§bThe wooden city.", "§bTreecutting + Mining", "§bMonarch: VersusS"));
-        inv.setItem(6, createGuiItem(Material.BRICKS, "§6Shoko", "§6CloudCraft's Capital City.", "§6Old-style romantic city.", "§6Exploration", "§6Monarch: valxteri"));
+        inv.setItem(3, createGuiItem(Material.BIRCH_WOOD, "§aKodoresu", "§a§l✔ §r§a PvP", "§a§l✔ §r§a Ice Melting", "§a§l✔ §r§a Mob Spawning", "§c§l✘ §r§c Mob Griefing", "§c§l✘ §r§c Leaf Decaying"));
+        inv.setItem(4, createGuiItem(Material.ICE, "§cSotogawa", "§a§l✔ §r§a PvP", "§a§l✔ §r§a Ice Melting", "§a§l✔ §r§a Mob Spawning", "§a§l✔ §c§a Mob Griefing", "§a§l✔ §r§a Leaf Decaying"));
+        inv.setItem(5, createGuiItem(Material.JUNGLE_LEAVES, "§bMekakushi", "§c§l✘ §r§c PvP", "§a§l✔ §r§a Ice Melting", "§c§l✘ §r§c Mob Spawning", "§c§l✘ §r§c Mob Griefing", "§a§l✔ §r§a Leaf Decaying"));
+        inv.setItem(6, createGuiItem(Material.BRICKS, "§6Shoko", "§c§l✘ §r§c PvP", "§c§l✘ §r§c Ice Melting", "§c§l✘ §r§c Mob Spawning", "§c§l✘ §r§c Mob Griefing", "§c§l✘ §c§l Leaf Decaying"));
         //inv.setItem(7, createGuiItem(Material.BLACK_BANNER, "§eKotonaru", "§aFirst line of the lore", "§bSecond line of the lore"));
     }
 
@@ -85,7 +86,7 @@ public class RegionSelectionGUI implements InventoryHolder, Listener {
             return;
         }*/
 
-        if (!e.getInventory().contains(createGuiItem(Material.BIRCH_LEAVES, "§aKodoresu", "§aHistorical city of CloudCraft.", "§aArmour + Weapons", "§aMonarch: dandabs"))) {
+        if (!e.getInventory().contains(createGuiItem(Material.BIRCH_WOOD, "§aKodoresu", "§a§l✔ §r§a PvP", "§a§l✔ §r§a Ice Melting", "§a§l✔ §r§a Mob Spawning", "§c§l✘ §r§c Mob Griefing", "§c§l✘ §r§c Leaf Decaying"))) {
             return;
         }
 
@@ -154,6 +155,8 @@ public class RegionSelectionGUI implements InventoryHolder, Listener {
             e.getWhoClicked().teleport(RegionLocations.getKotonaruSpawn());
             Bukkit.getServer().broadcastMessage(" §d{§5+§d} §dWelcome §5" + e.getWhoClicked().getName() + " §dto CloudCraft for the first time! They chose the §4Kotonaru §dregion.");
         }
+
+        e.getWhoClicked().sendMessage(ChatColor.RED + "Welcome! Learn how to play on our server at this link: " + ChatColor.YELLOW + "https://s.cloudcraftmc.org.uk/introduction" + ChatColor.RED + ".");
 
         try {
             userConfig.save(userFile);

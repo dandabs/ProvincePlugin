@@ -81,7 +81,7 @@ public class BlockRedstone implements Listener {
 
                 }
 
-            }, 0, 5);
+            }, 0, 10);
 
         }
 

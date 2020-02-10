@@ -3,10 +3,8 @@ package me.dandabs.listeners;
 import me.dandabs.Plugin;
 import me.dandabs.interfaces.RegionSelectionGUI;
 import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.configuration.file.YamlConfiguration;
-import org.bukkit.entity.HumanEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -27,8 +25,7 @@ public class InventoryClose implements Listener {
 
         Bukkit.getServer().getLogger().info("1");
 
-        if (e.getInventory().contains(new RegionSelectionGUI().createGuiItem(Material.BIRCH_LEAVES, "§aKodoresu", "§aHistorical city of CloudCraft.", "§aArmour + Weapons", "§aMonarch: dandabs")))
-        {
+        if (e.getInventory().contains(new RegionSelectionGUI().createGuiItem(Material.BIRCH_WOOD, "§aKodoresu", "§a§l✔ §r§a PvP", "§a§l✔ §r§a Ice Melting", "§a§l✔ §r§a Mob Spawning", "§c§l✘ §r§c Mob Griefing", "§c§l✘ §r§c Leaf Decaying"))) {
 
             Bukkit.getServer().getLogger().info("2");
 

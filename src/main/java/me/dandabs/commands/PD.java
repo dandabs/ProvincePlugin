@@ -11,9 +11,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.meta.ItemMeta;
 
-import java.io.File;
 import java.util.ArrayList;
-import java.util.UUID;
 
 public class PD implements CommandExecutor {
 
@@ -22,22 +20,6 @@ public class PD implements CommandExecutor {
 
         if (sender instanceof Player) {
             Player player = (Player) sender;
-
-            if ((args[0].contains("rmconf"))) {
-
-                OfflinePlayer target = Bukkit.getOfflinePlayer(args[1]);
-
-                UUID u = target.getUniqueId();
-
-                player.sendMessage("§cRemoving " + args[1] + "'s regional file.");
-
-                File userFile = new File("cloudconf" + File.separator + "users", u + ".yml");
-
-                userFile.delete();
-
-                player.sendMessage("§aSuccessfully deleted " + target.getUniqueId().toString() + ".yml.");
-
-            }
 
             if (args[0].contains("getscanner")) {
 

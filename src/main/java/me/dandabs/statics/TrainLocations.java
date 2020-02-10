@@ -31,6 +31,18 @@ public class TrainLocations {
 
             return makeLoc(2179.048, 66, -30174.699, 1.282, 3.402);
 
+        } else if (destination.equals("SotogawaCityTrain")) {
+
+            return makeLoc(2860.408, 63, -18650.531, 17.85, 3.151);
+
+        } else if (destination.equals("MekakushiCityMonorail")) {
+
+            return makeLoc(-2832.527, 97, -16410.544, 180.27, 1.9);
+
+        } else if (destination.equals("BallymenaReplicaTrain")) {
+
+            return makeLoc(590.408, 88, -16142.387, 101.266, 7.906);
+
         } else {
 
             return RegionLocations.getKodoresuSpawn();
