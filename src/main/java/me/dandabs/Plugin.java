@@ -48,6 +48,7 @@ public class Plugin extends JavaPlugin {
         this.getCommand("territory").setExecutor(new Territory());
         this.getCommand("citizenship").setExecutor(new Citizenship());
         this.getCommand("wilderness").setExecutor(new Wilderness());
+        this.getCommand("ppdev").setExecutor(new ppdev());
 
         Bukkit.getScheduler().scheduleSyncRepeatingTask(this.getInstance(), new Runnable() {
 
