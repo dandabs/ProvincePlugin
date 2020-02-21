@@ -20,8 +20,9 @@ public class ppdev implements CommandExecutor {
 
             File userFile = new File("cloudconf" + File.separator + "users", player.getUniqueId().toString() + ".yml");
             YamlConfiguration userConfig = YamlConfiguration.loadConfiguration(userFile);
-            player.sendMessage("Developed By Sebastian Nesci And Olavi Koskinen ");
+            player.sendMessage("Developed By Sebastian Nesci And Olävi Koskinen");
 
         }
-            return true;
-        }}
+        return true;
+    }
+}
