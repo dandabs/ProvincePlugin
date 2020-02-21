@@ -1,8 +1,8 @@
 name: ProvincePlugin
-version: 1.2
+version: 1.4
 api-version: 1.14
 load: STARTUP
-author: dandabs
+author: dandabs + Hydroweaponx
 website: https://cloudcraftmc.org.uk
 main: me.dandabs.Plugin
 database: false
@@ -39,5 +39,9 @@ commands:
   ppdev:
     description: ProvincePlugin development command
     usage: /ppdev
+    ppdev:
+  staff:
+    description: Shows Current Staff On CloudCraft
+    usage: /staff
       
 
