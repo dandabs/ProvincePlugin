@@ -22,6 +22,6 @@ public class ppdev implements CommandExecutor {
             YamlConfiguration userConfig = YamlConfiguration.loadConfiguration(userFile);
             player.sendMessage("Developed By Sebastian Nesci And Olavi Koskinen ");
 
-
+        }
             return true;
         }}
