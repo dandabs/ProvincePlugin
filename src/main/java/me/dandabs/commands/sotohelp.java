@@ -20,7 +20,7 @@ public class sotohelp implements CommandExecutor {
 
             File userFile = new File("cloudconf" + File.separator + "users", player.getUniqueId().toString() + ".yml");
             YamlConfiguration userConfig = YamlConfiguration.loadConfiguration(userFile);
-            player.sendMessage("If You See This Message, Alert The HoD");
+            player.sendMessage("If You See This Message, Tell The HoD");
 
         }
         return true;
