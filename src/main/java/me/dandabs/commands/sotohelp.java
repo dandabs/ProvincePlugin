@@ -20,7 +20,7 @@ public class sotohelp implements CommandExecutor {
 
             File userFile = new File("cloudconf" + File.separator + "users", player.getUniqueId().toString() + ".yml");
             YamlConfiguration userConfig = YamlConfiguration.loadConfiguration(userFile);
-            player.sendMessage("If You See This Message, Tell The HoD");
+            player.sendMessage("Sotogawa is an SMP region on CloudCraft. SMP has commands like /claim, /rtp, buy, & more. Sotogawa’s spawn area generally has a snowy & icy theme. Something unique to CloudCraft SMP is the other regions you can travel to. Near spawn, there is a train that you can walk into and you can select a region to travel to. This is useful if you have a friend in another region. I hope you enjoy CloudCraft as much as I do. Cheers, Hydroweaponx (HoD) (Founding Soto Monarch)");
 
         }
         return true;
