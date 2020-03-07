@@ -1,5 +1,5 @@
 name: ProvincePlugin
-version: 1.4
+version: 1.9
 api-version: 1.14
 load: STARTUP
 author: dandabs + Hydroweaponx
@@ -41,7 +41,18 @@ commands:
     usage: /ppdev
     ppdev:
   staff:
-    description: Shows Current Staff On CloudCraft
+    description: Shows Current Staff On The Updatable Staff List
     usage: /staff
-      
+  sotohelp:
+    description: Region Specific Help Command
+    usage: /sotohelp
+  kodohelp:
+    description: Region Specific Help Command
+    usage: /kodohelp
+  shokohelp:
+    description: Region Specific Help Command
+    usage: /shokohelp
+  mekahelp:
+    description: Region Specific Help Command
+    usage: /mekahelp
 

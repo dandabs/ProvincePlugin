@@ -1,8 +1,8 @@
 name: ProvincePlugin
-version: 1.1.0
+version: 1.9
 api-version: 1.14
 load: STARTUP
-author: dandabs
+author: dandabs + Hydroweaponx
 website: https://cloudcraftmc.org.uk
 main: me.dandabs.Plugin
 database: false
@@ -36,3 +36,23 @@ commands:
     description: Randomly teleport yourself into the world.
     usage: /wilderness
     aliases: [wild, rtp, randomtp, wildtp, rt, rgrtp]
+  ppdev:
+    description: ProvincePlugin development command
+    usage: /ppdev
+    ppdev:
+  staff:
+    description: Shows Current Staff On The Updatable Staff List
+    usage: /staff
+  sotohelp:
+    description: Region Specific Help Command
+    usage: /sotohelp
+  kodohelp:
+    description: Region Specific Help Command
+    usage: /kodohelp
+  shokohelp:
+    description: Region Specific Help Command
+    usage: /shokohelp
+  mekahelp:
+    description: Region Specific Help Command
+    usage: /mekahelp
+

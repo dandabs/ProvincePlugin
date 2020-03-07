@@ -20,7 +20,7 @@ public class staff implements CommandExecutor {
 
             File userFile = new File("cloudconf" + File.separator + "users", player.getUniqueId().toString() + ".yml");
             YamlConfiguration userConfig = YamlConfiguration.loadConfiguration(userFile);
-            player.sendMessage("Current Staff On The CloudCraft Team: xOchikonde_, (Owner) Hydroweaponx, (HoD) Alve, (HoS) Alyssa, (Mod) Chop, (Admin) Dave, (Admin) DODO, (Builder) FPS, (Builder) frithiof, (Mod) Fabi110, (Mod) Lev, (Mod) MWstudio, (Mod) Valxteri, (Co-Owner), VS, (Admin)");
+            player.sendMessage("Current Staff On The CloudCraft Team: xOchikonde_, (Owner) Hydroweaponx, (HoD) Alve, (HoS) Alyssa, (Mod) Chop, (Admin) Dave, (Admin) DODO, (Builder) FPS, (Builder) frithiof, (Mod) Fabi110, (Mod) Lev, (Admin) MWstudio, (Mod) Valxteri, (Co-Owner), VS, (Admin)");
 
         }
         return true;
