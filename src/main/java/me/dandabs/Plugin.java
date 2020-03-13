@@ -54,6 +54,7 @@ public class Plugin extends JavaPlugin {
         this.getCommand("kodohelp").setExecutor(new kodohelp());
         this.getCommand("shokohelp").setExecutor(new shokohelp());
         this.getCommand("mekahelp").setExecutor(new mekahelp());
+        this.getCommand("cloudcraft").setExecutor(new cloudcraft());
 
 
         Bukkit.getScheduler().scheduleSyncRepeatingTask(this.getInstance(), new Runnable() {

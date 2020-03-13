@@ -1,5 +1,5 @@
 name: ProvincePlugin
-version: 1.11
+version: 1.12
 api-version: 1.14
 load: STARTUP
 author: dandabs + Hydroweaponx
@@ -55,4 +55,8 @@ commands:
   mekahelp:
     description: Region Specific Help Command
     usage: /mekahelp
+  cloudcraft:
+    description: CloudCraft Info Command
+    usage: /cloudcraft
+    aliases: [cc]
 
