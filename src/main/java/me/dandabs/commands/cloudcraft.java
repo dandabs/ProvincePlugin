@@ -20,7 +20,7 @@ public class cloudcraft implements CommandExecutor {
 
             File userFile = new File("cloudconf" + File.separator + "users", player.getUniqueId().toString() + ".yml");
             YamlConfiguration userConfig = YamlConfiguration.loadConfiguration(userFile);
-            player.sendMessage("CloudCraft Is Currently Adding This Command. Check Back Later For Updates");
+            player.sendMessage("CloudCraft is an SMP server created by dandabs and SoulstrikerXD. For more extensive information, go to https://wiki.cloudcraftmc.org.uk");
 
         }
         return true;
