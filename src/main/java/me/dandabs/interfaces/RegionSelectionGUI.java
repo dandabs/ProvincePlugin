@@ -38,7 +38,7 @@ public class RegionSelectionGUI implements InventoryHolder, Listener {
     // You can call this whenever you want to put the items in
     public void initializeItems() {
 
-        inv.setItem(1, createGuiItem(Material.DARK_OAK_SIGN, "§cWelcome!", "§aHere on CloudCraft, you are assigned to a country.", "§eThis country will be the only place you can build.", "§bView each region's description and click on the one you'd like to start with.", "§4Note: you may change your country later."));
+        inv.setItem(1, createGuiItem(Material.DARK_OAK_SIGN, "§cWelcome!", "§aHere on CloudCraft, you are assigned to a region.", "§eThis region will be the only place you can build.", "§bView each region's description and click on the one you'd like to start with.", "§4Note: you may change your region later."));
 
         inv.setItem(3, createGuiItem(Material.BIRCH_WOOD, "§aKodoresu", "§a§l✔ §r§a PvP", "§a§l✔ §r§a Ice Melting", "§a§l✔ §r§a Mob Spawning", "§c§l✘ §r§c Mob Griefing", "§c§l✘ §r§c Leaf Decaying"));
         inv.setItem(4, createGuiItem(Material.ICE, "§cSotogawa", "§a§l✔ §r§a PvP", "§a§l✔ §r§a Ice Melting", "§a§l✔ §r§a Mob Spawning", "§a§l✔ §c§a Mob Griefing", "§a§l✔ §r§a Leaf Decaying"));
