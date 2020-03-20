@@ -49,12 +49,6 @@ public class Plugin extends JavaPlugin {
         this.getCommand("citizenship").setExecutor(new Citizenship());
         this.getCommand("wilderness").setExecutor(new Wilderness());
         this.getCommand("ppdev").setExecutor(new ppdev());
-        this.getCommand("staff").setExecutor(new staff());
-        this.getCommand("sotohelp").setExecutor(new sotohelp());
-        this.getCommand("kodohelp").setExecutor(new kodohelp());
-        this.getCommand("shokohelp").setExecutor(new shokohelp());
-        this.getCommand("mekahelp").setExecutor(new mekahelp());
-        this.getCommand("cloudcraft").setExecutor(new cloudcraft());
 
 
 
