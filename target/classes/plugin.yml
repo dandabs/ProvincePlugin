@@ -1,8 +1,8 @@
 name: ProvincePlugin
-version: 1.15
+version: 1.2
 api-version: 1.14
 load: STARTUP
-author: dandabs + Hydroweaponx
+author: dandabs
 website: https://cloudcraftmc.org.uk
 main: me.dandabs.Plugin
 database: false
@@ -39,24 +39,5 @@ commands:
   ppdev:
     description: ProvincePlugin development command
     usage: /ppdev
-    ppdev:
-  staff:
-    description: Shows Current Staff On The Updatable Staff List
-    usage: /staff
-  sotohelp:
-    description: Region Specific Help Command
-    usage: /sotohelp
-  kodohelp:
-    description: Region Specific Help Command
-    usage: /kodohelp
-  shokohelp:
-    description: Region Specific Help Command
-    usage: /shokohelp
-  mekahelp:
-    description: Region Specific Help Command
-    usage: /mekahelp
-  cloudcraft:
-    description: CloudCraft Info Command
-    usage: /cloudcraft
-    aliases: [cc]
+      
 
