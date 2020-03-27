@@ -60,4 +60,15 @@ public class RegionLocations {
 
     }
 
+    public static Location getLobby() {
+
+        Location loc = new Location(Bukkit.getWorld("world"), -7640.50, 73.000, -43100);
+
+        loc.setPitch((float) 0.899);
+        loc.setYaw((float) 179.983);
+
+        return loc;
+
+    }
+
 }

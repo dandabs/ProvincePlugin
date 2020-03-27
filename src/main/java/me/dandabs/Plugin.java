@@ -44,6 +44,7 @@ public class Plugin extends JavaPlugin {
 
         this.getCommand("pd").setExecutor(new PD());
         this.getCommand("spawn").setExecutor(new Spawn());
+        this.getCommand("lobby").setExecutor(new Lobby());
         this.getCommand("whereis").setExecutor(new Whereis());
         this.getCommand("territory").setExecutor(new Territory());
         this.getCommand("citizenship").setExecutor(new Citizenship());
