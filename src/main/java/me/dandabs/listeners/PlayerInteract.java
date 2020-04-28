@@ -42,7 +42,7 @@ public class PlayerInteract implements Listener {
 
         // Admin iron door access
 
-        if (e.getAction().equals(Action.RIGHT_CLICK_BLOCK) && e.getClickedBlock().getType() == Material.IRON_DOOR && e.getPlayer().getName().equals("xOchikonde_") && e.getPlayer().getItemInHand().getType() == Material.AIR) {
+        if (e.getAction().equals(Action.RIGHT_CLICK_BLOCK) && e.getClickedBlock().getType() == Material.IRON_DOOR && e.getPlayer().getName().equals("xpaistinpannu") && e.getPlayer().getItemInHand().getType() == Material.AIR) {
 
             Bukkit.getServer().getLogger().info(e.getPlayer().getName());
 
