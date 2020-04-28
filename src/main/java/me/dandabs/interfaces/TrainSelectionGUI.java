@@ -115,7 +115,7 @@ public class TrainSelectionGUI implements InventoryHolder, Listener {
 
             Location dest = TrainLocations.getDestination("KodoresuCityTrain");
             double distance = e.getWhoClicked().getLocation().distance(dest);
-            double seconds = (distance / 2) / 60;
+            double seconds = (distance / 10) / 60;
             new TrainSystem().boardTrain(((Player) e.getWhoClicked()), Integer.valueOf((int) (Integer.valueOf((int) Instant.now().getEpochSecond()) + seconds)), "KodoresuCityTrain");
 
         }
@@ -124,7 +124,7 @@ public class TrainSelectionGUI implements InventoryHolder, Listener {
 
             Location dest = TrainLocations.getDestination("ShokoCitySubway");
             double distance = e.getWhoClicked().getLocation().distance(dest);
-            double seconds = (distance / 2) / 60;
+            double seconds = (distance / 10) / 60;
             new TrainSystem().boardTrain(((Player) e.getWhoClicked()), Integer.valueOf((int) (Integer.valueOf((int) Instant.now().getEpochSecond()) + seconds)), "ShokoCitySubway");
 
         }
@@ -133,7 +133,7 @@ public class TrainSelectionGUI implements InventoryHolder, Listener {
 
             Location dest = TrainLocations.getDestination("SotogawaCityTrain");
             double distance = e.getWhoClicked().getLocation().distance(dest);
-            double seconds = (distance / 2) / 60;
+            double seconds = (distance / 10) / 60;
             new TrainSystem().boardTrain(((Player) e.getWhoClicked()), Integer.valueOf((int) (Integer.valueOf((int) Instant.now().getEpochSecond()) + seconds)), "SotogawaCityTrain");
 
         }
@@ -142,7 +142,7 @@ public class TrainSelectionGUI implements InventoryHolder, Listener {
 
             Location dest = TrainLocations.getDestination("MekakushiCityMonorail");
             double distance = e.getWhoClicked().getLocation().distance(dest);
-            double seconds = (distance / 2) / 60;
+            double seconds = (distance / 10) / 60;
             new TrainSystem().boardTrain(((Player) e.getWhoClicked()), Integer.valueOf((int) (Integer.valueOf((int) Instant.now().getEpochSecond()) + seconds)), "MekakushiCityMonorail");
 
         }
@@ -151,7 +151,7 @@ public class TrainSelectionGUI implements InventoryHolder, Listener {
 
             Location dest = TrainLocations.getDestination("BallymenaReplicaTrain");
             double distance = e.getWhoClicked().getLocation().distance(dest);
-            double seconds = (distance / 2) / 60;
+            double seconds = (distance / 10) / 60;
             new TrainSystem().boardTrain(((Player) e.getWhoClicked()), Integer.valueOf((int) (Integer.valueOf((int) Instant.now().getEpochSecond()) + seconds)), "BallymenaReplicaTrain");
 
         }

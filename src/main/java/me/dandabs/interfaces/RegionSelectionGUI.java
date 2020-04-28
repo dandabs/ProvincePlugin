@@ -116,7 +116,7 @@ public class RegionSelectionGUI implements InventoryHolder, Listener {
             userRegions.add("kodoresu");
             userConfig.set("player.nationalities", userRegions);
             Plugin.getInstance().getServer().dispatchCommand(getServer().getConsoleSender(), "lp user " + e.getWhoClicked().getName() + " permission set group.kodoresu");
-            e.getWhoClicked().teleport(RegionLocations.getKodoresuSpawn());
+            e.getWhoClicked().teleport(RegionLocations.getLobby());
             Bukkit.getServer().broadcastMessage(" §d{§5+§d} §dWelcome §5" + e.getWhoClicked().getName() + " §dto CloudCraft for the first time! They chose the §4Kodoresu §dregion.");
         }
 
@@ -125,7 +125,7 @@ public class RegionSelectionGUI implements InventoryHolder, Listener {
             userRegions.add("sotogawa");
             userConfig.set("player.nationalities", userRegions);
             Plugin.getInstance().getServer().dispatchCommand(getServer().getConsoleSender(), "lp user " + e.getWhoClicked().getName() + " permission set group.sotogawa");
-            e.getWhoClicked().teleport(RegionLocations.getSotogawaSpawn());
+            e.getWhoClicked().teleport(RegionLocations.getLobby());
             Bukkit.getServer().broadcastMessage(" §d{§5+§d} §dWelcome §5" + e.getWhoClicked().getName() + " §dto CloudCraft for the first time! They chose the §4Sotogawa §dregion.");
         }
 
@@ -134,7 +134,7 @@ public class RegionSelectionGUI implements InventoryHolder, Listener {
             userRegions.add("mekakushi");
             userConfig.set("player.nationalities", userRegions);
             Plugin.getInstance().getServer().dispatchCommand(getServer().getConsoleSender(), "lp user " + e.getWhoClicked().getName() + " permission set group.mekakushi");
-            e.getWhoClicked().teleport(RegionLocations.getMekakushiSpawn());
+            e.getWhoClicked().teleport(RegionLocations.getLobby());
             Bukkit.getServer().broadcastMessage(" §d{§5+§d} §dWelcome §5" + e.getWhoClicked().getName() + " §dto CloudCraft for the first time! They chose the §4Mekakushi §dregion.");
         }
 
@@ -143,7 +143,7 @@ public class RegionSelectionGUI implements InventoryHolder, Listener {
             userRegions.add("shoko");
             userConfig.set("player.nationalities", userRegions);
             Plugin.getInstance().getServer().dispatchCommand(getServer().getConsoleSender(), "lp user " + e.getWhoClicked().getName() + " permission set group.shoko");
-            e.getWhoClicked().teleport(RegionLocations.getShokoSpawn());
+            e.getWhoClicked().teleport(RegionLocations.getLobby());
             Bukkit.getServer().broadcastMessage(" §d{§5+§d} §dWelcome §5" + e.getWhoClicked().getName() + " §dto CloudCraft for the first time! They chose the §4Shoko §dregion.");
         }
 
@@ -152,7 +152,7 @@ public class RegionSelectionGUI implements InventoryHolder, Listener {
             userRegions.add("kotonaru");
             userConfig.set("player.nationalities", userRegions);
             Plugin.getInstance().getServer().dispatchCommand(getServer().getConsoleSender(), "lp user " + e.getWhoClicked().getName() + " permission set group.kotonaru");
-            e.getWhoClicked().teleport(RegionLocations.getKotonaruSpawn());
+            e.getWhoClicked().teleport(RegionLocations.getLobby());
             Bukkit.getServer().broadcastMessage(" §d{§5+§d} §dWelcome §5" + e.getWhoClicked().getName() + " §dto CloudCraft for the first time! They chose the §4Kotonaru §dregion.");
         }
 

@@ -1,8 +1,8 @@
 name: ProvincePlugin
-version: 1.2
+version: 1.15
 api-version: 1.14
 load: STARTUP
-author: dandabs
+author: dandabs + Hydroweaponx
 website: https://cloudcraftmc.org.uk
 main: me.dandabs.Plugin
 database: false
@@ -18,7 +18,11 @@ commands:
   spawn:
     description: Go to the server spawn for your region.
     usage: /spawn [username]
-    aliases: [gotospawn]
+    aliases: [gotospawn, regionspawn, rspawn, region, myregion]
+  lobby:
+    description: Go to the server spawn for your region.
+    usage: /lobby [username]
+    aliases: [hub, gspawn, globalspawn, ghub, mainspawn]
   whereis:
     description: Check which region a player is in.
     usage: /whereis <username>
@@ -39,5 +43,3 @@ commands:
   ppdev:
     description: ProvincePlugin development command
     usage: /ppdev
-      
-

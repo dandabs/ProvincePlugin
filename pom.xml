@@ -6,7 +6,7 @@
 
     <groupId>me.dandabs</groupId>
     <artifactId>ProvincePlugin</artifactId>
-    <version>1.15</version>
+    <version>1.16</version>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -26,13 +26,17 @@
             <id>placeholderapi</id>
             <url>http://repo.extendedclip.com/content/repositories/placeholderapi/</url>
         </repository>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
     </repositories>
 
     <dependencies>
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
-            <version>1.14-R0.1-SNAPSHOT</version>
+            <version>1.15-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -76,6 +80,17 @@
             <artifactId>WorldGuardEvents</artifactId>
             <version>1.14.4-R0</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.github.MilkBowl</groupId>
+            <artifactId>VaultAPI</artifactId>
+            <version>1.7</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.github.Staartvin</groupId>
+            <artifactId>Statz</artifactId>
+            <version>v1.5.5</version>
         </dependency>
     </dependencies>
 

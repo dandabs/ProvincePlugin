@@ -2,7 +2,9 @@
 /Volumes/NuudeliNAS/IdeaProjects/ProvincePlugin/src/main/java/me/dandabs/commands/Whereis.java
 /Volumes/NuudeliNAS/IdeaProjects/ProvincePlugin/src/main/java/me/dandabs/listeners/InventoryClose.java
 /Volumes/NuudeliNAS/IdeaProjects/ProvincePlugin/src/main/java/me/dandabs/statics/TrainLocations.java
+/Volumes/NuudeliNAS/IdeaProjects/ProvincePlugin/src/main/java/me/dandabs/commands/sotohelp.java
 /Volumes/NuudeliNAS/IdeaProjects/ProvincePlugin/src/main/java/me/dandabs/interfaces/TrainSelectionGUI.java
+/Volumes/NuudeliNAS/IdeaProjects/ProvincePlugin/src/main/java/me/dandabs/commands/kodohelp.java
 /Volumes/NuudeliNAS/IdeaProjects/ProvincePlugin/src/main/java/me/dandabs/listeners/PlayerTeleport.java
 /Volumes/NuudeliNAS/IdeaProjects/ProvincePlugin/src/main/java/me/dandabs/listeners/PlayerJoin.java
 /Volumes/NuudeliNAS/IdeaProjects/ProvincePlugin/src/main/java/me/dandabs/templates/Command.java
@@ -11,7 +13,11 @@
 /Volumes/NuudeliNAS/IdeaProjects/ProvincePlugin/src/main/java/me/dandabs/commands/ppdev.java
 /Volumes/NuudeliNAS/IdeaProjects/ProvincePlugin/src/main/java/me/dandabs/statics/RegionLocations.java
 /Volumes/NuudeliNAS/IdeaProjects/ProvincePlugin/src/main/java/me/dandabs/commands/Spawn.java
+/Volumes/NuudeliNAS/IdeaProjects/ProvincePlugin/src/main/java/me/dandabs/commands/mekahelp.java
 /Volumes/NuudeliNAS/IdeaProjects/ProvincePlugin/src/main/java/me/dandabs/statics/PresetItems.java
+/Volumes/NuudeliNAS/IdeaProjects/ProvincePlugin/src/main/java/me/dandabs/commands/Lobby.java
+/Volumes/NuudeliNAS/IdeaProjects/ProvincePlugin/src/main/java/me/dandabs/commands/staff.java
+/Volumes/NuudeliNAS/IdeaProjects/ProvincePlugin/src/main/java/me/dandabs/commands/cloudcraft.java
 /Volumes/NuudeliNAS/IdeaProjects/ProvincePlugin/src/main/java/me/dandabs/utilities/TrainSystem.java
 /Volumes/NuudeliNAS/IdeaProjects/ProvincePlugin/src/main/java/me/dandabs/listeners/RegionEnter.java
 /Volumes/NuudeliNAS/IdeaProjects/ProvincePlugin/src/main/java/me/dandabs/interfaces/RegionSelectionGUI.java
@@ -27,3 +33,5 @@
 /Volumes/NuudeliNAS/IdeaProjects/ProvincePlugin/src/main/java/me/dandabs/listeners/InventoryOpen.java
 /Volumes/NuudeliNAS/IdeaProjects/ProvincePlugin/src/main/java/me/dandabs/listeners/PlayerLeave.java
 /Volumes/NuudeliNAS/IdeaProjects/ProvincePlugin/src/main/java/me/dandabs/commands/Territory.java
+/Volumes/NuudeliNAS/IdeaProjects/ProvincePlugin/src/main/java/me/dandabs/utilities/RegionPoints.java
+/Volumes/NuudeliNAS/IdeaProjects/ProvincePlugin/src/main/java/me/dandabs/commands/shokohelp.java
