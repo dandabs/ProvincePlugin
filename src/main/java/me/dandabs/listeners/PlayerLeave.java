@@ -8,6 +8,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerQuitEvent;
 
 import java.io.File;
+import java.io.IOException;
 
 public class PlayerLeave implements Listener {
 
@@ -41,6 +42,12 @@ public class PlayerLeave implements Listener {
         points += mobs * 2;
 
         userConfig.set("player.points", points);
+
+        try {
+            userConfig.save(userFile);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         event.setQuitMessage(" §6{§c-§6} §6" + event.getPlayer().getName());
 

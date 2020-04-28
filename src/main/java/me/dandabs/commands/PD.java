@@ -70,13 +70,18 @@ public class PD implements CommandExecutor {
             }
 
             if (args[0].equals("points")) {
+
                 if (args[1].contains("kodoresu"))
                     player.sendMessage("" + new RegionPoints().calculatePoints("kodoresu"));
+
                 if (args[1].contains("shoko")) player.sendMessage("" + new RegionPoints().calculatePoints("shoko"));
+
                 if (args[1].contains("mekakushi"))
                     player.sendMessage("" + new RegionPoints().calculatePoints("mekakushi"));
+
                 if (args[1].contains("sotogawa"))
                     player.sendMessage("" + new RegionPoints().calculatePoints("sotogawa"));
+
             }
 
         }
