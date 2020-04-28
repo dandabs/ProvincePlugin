@@ -1,17 +1,17 @@
 package me.dandabs.commands;
 
 import me.dandabs.interfaces.TrainSelectionGUI;
-import me.dandabs.statics.PresetItems;
 import me.dandabs.utilities.RegionPoints;
 import me.dandabs.utilities.TrainSystem;
 import org.bukkit.Bukkit;
-import org.bukkit.OfflinePlayer;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.meta.ItemMeta;
 
+import java.io.File;
 import java.util.ArrayList;
 
 public class PD implements CommandExecutor {
@@ -21,26 +21,6 @@ public class PD implements CommandExecutor {
 
         if (sender instanceof Player) {
             Player player = (Player) sender;
-
-            if (args[0].contains("getscanner")) {
-
-                player.getInventory().setItemInMainHand(new PresetItems().securityScanner(Integer.valueOf(args[1])));
-
-            }
-
-            if (args[0].contains("getpass")) {
-
-                OfflinePlayer opl = Bukkit.getOfflinePlayer(args[2]);
-
-                player.getInventory().setItemInMainHand(new PresetItems().securityPass(Integer.valueOf(args[1]), opl));
-
-            }
-
-            if (args[0].contains("getkey")) {
-
-                player.getInventory().setItemInMainHand(new PresetItems().blankKey());
-
-            }
 
             if (args[0].equals("setlore")) {
 
@@ -57,7 +37,7 @@ public class PD implements CommandExecutor {
 
             if (args[0].equals("boardtrain")) {
 
-                Integer endtime = Math.toIntExact((System.currentTimeMillis() / 1000L)) + 60;
+                Integer endtime = Math.toIntExact((System.currentTimeMillis() / 1000L)) + 20;
 
                 new TrainSystem().boardTrain(player, endtime, args[1]);
 
@@ -74,13 +54,27 @@ public class PD implements CommandExecutor {
                 if (args[1].contains("kodoresu"))
                     player.sendMessage("" + new RegionPoints().calculatePoints("kodoresu"));
 
-                if (args[1].contains("shoko")) player.sendMessage("" + new RegionPoints().calculatePoints("shoko"));
+                if (args[1].contains("shoko"))
+                    player.sendMessage("" + new RegionPoints().calculatePoints("shoko"));
 
                 if (args[1].contains("mekakushi"))
                     player.sendMessage("" + new RegionPoints().calculatePoints("mekakushi"));
 
                 if (args[1].contains("sotogawa"))
                     player.sendMessage("" + new RegionPoints().calculatePoints("sotogawa"));
+
+            }
+
+        } else {
+
+            if (args[1].contains("addpoints")) {
+
+                File userFile = new File("cloudconf" + File.separator + "users", Bukkit.getOfflinePlayer(args[3]).getUniqueId().toString() + ".yml");
+                YamlConfiguration userConfig = YamlConfiguration.loadConfiguration(userFile);
+
+                userConfig.set("player.points", userConfig.getInt("player.points") + Integer.parseInt(args[2]));
+
+                System.out.println("Added " + args[2] + " points to player " + args[3] + ".");
 
             }
 
