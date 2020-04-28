@@ -3,6 +3,7 @@ package me.dandabs.placeholders;
 import me.clip.placeholderapi.expansion.PlaceholderExpansion;
 import me.dandabs.Plugin;
 import me.dandabs.utilities.RegionGetters;
+import me.dandabs.utilities.RegionPoints;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
 
@@ -108,14 +109,38 @@ public class RegionExpansion extends PlaceholderExpansion {
             return "";
         }
 
-        if(identifier.equals("current")){
+        if (identifier.equals("current")) {
 
             return new RegionGetters().whichRegion(player).substring(0, 1).toUpperCase() + new RegionGetters().whichRegion(player).substring(1);
         }
 
-        if(identifier.equals("starter")){
+        if (identifier.equals("starter")) {
 
             return userConfig.getString("player.startingregion").substring(0, 1).toUpperCase() + userConfig.getString("player.startingregion").substring(1);
+        }
+
+        if (identifier.equals("points-kr")) {
+
+            return "" + new RegionPoints().calculatePoints("kodoresu");
+
+        }
+
+        if (identifier.equals("points-sk")) {
+
+            return "" + new RegionPoints().calculatePoints("shoko");
+
+        }
+
+        if (identifier.equals("points-mk")) {
+
+            return "" + new RegionPoints().calculatePoints("mekakushi");
+
+        }
+
+        if (identifier.equals("points-sg")) {
+
+            return "" + new RegionPoints().calculatePoints("sotogawa");
+
         }
 
         // We return null if an invalid placeholder (f.e. %someplugin_placeholder3%)
