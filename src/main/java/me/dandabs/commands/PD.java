@@ -67,14 +67,14 @@ public class PD implements CommandExecutor {
 
         } else {
 
-            if (args[1].contains("addpoints")) {
+            if (args[0].contains("addpoints")) {
 
-                File userFile = new File("cloudconf" + File.separator + "users", Bukkit.getOfflinePlayer(args[3]).getUniqueId().toString() + ".yml");
+                File userFile = new File("cloudconf" + File.separator + "users", Bukkit.getOfflinePlayer(args[2]).getUniqueId().toString() + ".yml");
                 YamlConfiguration userConfig = YamlConfiguration.loadConfiguration(userFile);
 
-                userConfig.set("player.points", userConfig.getInt("player.points") + Integer.parseInt(args[2]));
+                userConfig.set("player.points", userConfig.getInt("player.points") + Integer.parseInt(args[1]));
 
-                System.out.println("Added " + args[2] + " points to player " + args[3] + ".");
+                System.out.println("Added " + args[1] + " points to player " + args[2] + ".");
 
             }
 
