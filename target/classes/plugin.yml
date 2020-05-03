@@ -43,3 +43,11 @@ commands:
   ppdev:
     description: ProvincePlugin development command
     usage: /ppdev
+  staffmode:
+    description: ProvincePlugin development command
+    usage: /staffmode
+    aliases: [sm]
+  checkstaff:
+    description: ProvincePlugin development command
+    usage: /staffmode
+    aliases: [cs]

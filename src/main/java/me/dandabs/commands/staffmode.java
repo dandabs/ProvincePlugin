@@ -1,5 +1,8 @@
 package me.dandabs.commands;
 
+import me.dandabs.statics.RegionLocations;
+import org.bukkit.ChatColor;
+import org.bukkit.GameMode;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.YamlConfiguration;
@@ -7,7 +10,7 @@ import org.bukkit.entity.Player;
 
 import java.io.File;
 
-public class sotohelp implements CommandExecutor {
+public class staffmode implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, org.bukkit.command.Command command, String label, String[] args) {
@@ -20,7 +23,27 @@ public class sotohelp implements CommandExecutor {
 
             File userFile = new File("cloudconf" + File.separator + "users", player.getUniqueId().toString() + ".yml");
             YamlConfiguration userConfig = YamlConfiguration.loadConfiguration(userFile);
-            player.sendMessage("Sotogawa is an SMP region on CloudCraft. SMP has commands like /claim, /rtp, buy, & more. Sotogawa’s spawn area generally has a snowy & icy theme. Something unique to CloudCraft SMP is the other regions you can travel to. Near spawn, there is a train that you can walk into and you can select a region to travel to. This is useful if you have a friend in another region. I hope you enjoy CloudCraft as much as I do. Thanks, Hydroweaponx (HoD) (Founding Soto Monarch)");
+
+            if (player.hasPermission("group.admin")) {
+
+                if (player.isOp()) {
+
+                    player.setOp(false);
+                    player.setGameMode(GameMode.SURVIVAL);
+                    player.teleport(new RegionLocations().getLobby());
+
+                } else {
+
+                    player.setOp(true);
+                    player.setGameMode(GameMode.CREATIVE);
+
+                }
+
+            } else {
+
+                player.sendMessage(ChatColor.translateAlternateColorCodes('&', langConfig.getString("provinceplugin.nopermission")));
+
+            }
 
         }
         return true;

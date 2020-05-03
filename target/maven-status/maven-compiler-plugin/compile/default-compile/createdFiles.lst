@@ -32,13 +32,16 @@ me/dandabs/statics/PresetItems.class
 me/dandabs/listeners/PlayerJoin.class
 me/dandabs/commands/Lobby.class
 me/dandabs/templates/Command.class
+me/dandabs/commands/staffmode.class
 me/dandabs/listeners/BlockRedstone.class
 me/dandabs/listeners/EntityDamage.class
 me/dandabs/listeners/PlayerInteract$2.class
 me/dandabs/commands/Citizenship.class
 me/dandabs/commands/staff.class
+me/dandabs/commands/checkstaff.class
 me/dandabs/commands/Whereis.class
 me/dandabs/utilities/RegionPoints.class
+me/dandabs/Plugin$2.class
 me/dandabs/statics/RegionLocations.class
 me/dandabs/listeners/InventoryClose$1.class
 me/dandabs/interfaces/TrainSelectionGUI$1.class

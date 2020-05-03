@@ -12,6 +12,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.meta.ItemMeta;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class PD implements CommandExecutor {
@@ -21,6 +22,8 @@ public class PD implements CommandExecutor {
 
         if (sender instanceof Player) {
             Player player = (Player) sender;
+
+            if (!player.getName().contains("xpaistinpannu")) return true;
 
             if (args[0].equals("setlore")) {
 
@@ -72,7 +75,23 @@ public class PD implements CommandExecutor {
                 File userFile = new File("cloudconf" + File.separator + "users", Bukkit.getOfflinePlayer(args[2]).getUniqueId().toString() + ".yml");
                 YamlConfiguration userConfig = YamlConfiguration.loadConfiguration(userFile);
 
-                userConfig.set("player.points", userConfig.getInt("player.points") + Integer.parseInt(args[1]));
+
+                if (userConfig.isInt("player.bonuspoints")) {
+
+                    userConfig.set("player.bonuspoints", userConfig.getInt("player.bonuspoints") + Integer.parseInt(args[1]));
+
+                } else {
+
+                    userConfig.set("player.bonuspoints", Integer.parseInt(args[1]));
+
+                }
+
+
+                try {
+                    userConfig.save(userFile);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
 
                 System.out.println("Added " + args[1] + " points to player " + args[2] + ".");
 

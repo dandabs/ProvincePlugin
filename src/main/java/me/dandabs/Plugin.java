@@ -9,11 +9,16 @@ import net.milkbowl.vault.chat.Chat;
 import net.milkbowl.vault.economy.Economy;
 import net.milkbowl.vault.permission.Permission;
 import org.bukkit.Bukkit;
+import org.bukkit.configuration.file.YamlConfiguration;
+import org.bukkit.entity.Player;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.io.File;
+import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.TimeZone;
 import java.util.logging.Logger;
@@ -72,6 +77,8 @@ public class Plugin extends JavaPlugin {
         this.getCommand("citizenship").setExecutor(new Citizenship());
         this.getCommand("wilderness").setExecutor(new Wilderness());
         this.getCommand("ppdev").setExecutor(new ppdev());
+        this.getCommand("staffmode").setExecutor(new staffmode());
+        this.getCommand("checkstaff").setExecutor(new checkstaff());
 
         if (!setupEconomy()) {
             log.severe(String.format("[%s] - Disabled due to no Vault dependency found!", getDescription().getName()));
@@ -93,6 +100,30 @@ public class Plugin extends JavaPlugin {
 
 
                 Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), "etime set " + df.format(date) + " world");
+
+            }
+
+        }, 1, 20 * 60 * 1);
+
+        Bukkit.getScheduler().scheduleSyncRepeatingTask(this.getInstance(), new Runnable() {
+
+            @Override
+            public void run() {
+
+                for (Player p : Bukkit.getServer().getOnlinePlayers()) {
+
+                    File userFile = new File("cloudconf" + File.separator + "users", p.getUniqueId().toString() + ".yml");
+                    YamlConfiguration userConfig = YamlConfiguration.loadConfiguration(userFile);
+
+                    userConfig.set("player.playtime." + LocalDateTime.now().getYear() + "." + LocalDateTime.now().getMonth() + "." + LocalDateTime.now().getDayOfMonth(), userConfig.getInt("player.playtime." + LocalDateTime.now().getYear() + "." + LocalDateTime.now().getMonth() + "." + LocalDateTime.now().getDayOfMonth()) + 1);
+
+                    try {
+                        userConfig.save(userFile);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+
+                }
 
             }
 

@@ -26,16 +26,11 @@ public class RegionPoints {
 
             String userRegion = userConfig.getString("player.startingregion");
 
-            System.out.println(userRegion + " is userregion");
-            System.out.println(region + " is region");
-
             if (region.equals(userRegion)) {
-
-                System.out.println(userConfig.getString("player.uuid"));
 
                 OfflinePlayer player = Bukkit.getOfflinePlayer(UUID.fromString(userConfig.getString("player.uuid")));
 
-                points += userConfig.getInt("player.points");
+                points += userConfig.getInt("player.points") + userConfig.getInt("player.bonuspoints");
 
             }
 

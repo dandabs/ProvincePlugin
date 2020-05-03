@@ -43,6 +43,12 @@ public class PlayerLeave implements Listener {
 
         userConfig.set("player.points", points);
 
+        boolean staff = false;
+
+        if (player.hasPermission("group.moderator")) staff = true;
+
+        userConfig.set("player.isstaff", staff);
+
         try {
             userConfig.save(userFile);
         } catch (IOException e) {
